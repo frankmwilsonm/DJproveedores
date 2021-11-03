@@ -125,3 +125,20 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# DRF
+# Esto hace que se limite el acceso segun lo configuremos
+REST_FRAMEWORK = {
+'DEFAULT_PERMISSION_CLASSES': [
+## Habilitar para restringir escritura
+#'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly', 
+## Habilitar para todos los permisos
+'rest_framework.permissions.AllowAny',
+],
+
+## Activar estas dos para la paginate
+#'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#'PAGE_SIZE': 10
+}
+# DRF ##
+

@@ -5,7 +5,7 @@ from .serializers import ProveedorSerializer
 from .models import Proveedor
 
 class ProveedorViewSet (viewsets.ModelViewSet):
-    queryset-Proveedor.objects.all()
+    queryset=Proveedor.objects.all()
     serializer_class = ProveedorSerializer
 
 # Create your views here.

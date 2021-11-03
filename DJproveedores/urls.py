@@ -21,7 +21,7 @@ from rest_framework import routers
 from apirest import views
 
 router=routers.DefaultRouter()
-router.register('proveedores', views.ProductoViewSet)
+router.register('proveedores', views.ProveedorViewSet)
 # urls ##
 
 urlpatterns = [

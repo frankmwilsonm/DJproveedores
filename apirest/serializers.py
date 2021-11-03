@@ -3,5 +3,5 @@ from .models import Proveedor
 
 class ProveedorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model-Proveedor
+        model=Proveedor
         fields = ('id', 'nombres', 'apellidos', 'razonsocial','direccion', 'ruc', 'celular')
