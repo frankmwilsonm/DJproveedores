@@ -20,6 +20,8 @@ from django.urls.conf import include
 from rest_framework import routers
 from apirest import views
 
+from proveedores.views import ProveedorListView
+
 router=routers.DefaultRouter()
 router.register('proveedores', views.ProveedorViewSet)
 # urls ##
@@ -27,5 +29,6 @@ router.register('proveedores', views.ProveedorViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     # urls
-    path('api/', include(router.urls)) # urls ##
+    path('api/', include(router.urls)), # urls ##
+    path('proveedores',ProveedorListView.as_view(template_name="proveedores/index.html"),name='listar')
 ]
