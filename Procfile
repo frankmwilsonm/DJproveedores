@@ -1,1 +1,1 @@
-gunicorn DJproveedores.wsgi
+web: gunicorn DJproveedores.wsgi
