@@ -41,12 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'apirest',
-    'proveedores'    
+    'proveedores',
+    'corsheaders'    
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -147,3 +149,10 @@ REST_FRAMEWORK = {
 }
 # DRF ##
 
+'corsheaders.middleware.CorsMiddleware',
+CORS_ALLOWED_ORIGINS = [
+    "http://192.168.0.130:4200",
+    "http://127.0.0.1:4200",
+    "http://9751-200-121-203-207.ngrok.io"
+
+]
